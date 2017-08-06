@@ -1,9 +1,12 @@
-document.write('hello');
+var events = require('events');
+var eventEmitter = new events.EventEmitter();
 
-//var events = require('events');
-//var closeEl = document.querySelector('.close');
-//var eventEmitter = new events.EventEmitter();
+//Create an event handler:
+var myEventHandler = function () {
+  document.write('Event Triggered');
+}
 
-//closeEl.addEventListener('click', function () {
-//    eventEmitter.emit('scream');
-//});
+//Assign the event handler to an event:
+eventEmitter.on('scream', myEventHandler);
+
+eventEmitter.emit('scream');
