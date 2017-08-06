@@ -1,4 +1,9 @@
-var events = require('events');
-var eventEmitter = new events.EventEmitter();
+document.write('hello');
 
-eventEmitter.emit('scream');
+//var events = require('events');
+//var closeEl = document.querySelector('.close');
+//var eventEmitter = new events.EventEmitter();
+
+//closeEl.addEventListener('click', function () {
+//    eventEmitter.emit('scream');
+//});
