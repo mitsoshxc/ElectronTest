@@ -1,12 +1,13 @@
-var events = require('events');
-var eventEmitter = new events.EventEmitter();
+var ipc = require('electron').ipcRenderer;
+var closeEl = document.getElementById("close");
+var minimizeWindow = document.getElementById("minimize");
+var maximizeWindow = document.getElementById("maximize");
 
-//Create an event handler:
-var myEventHandler = function () {
-  document.write('Event Triggered');
-}
+closeEl.addEventListener('click', function () {
+    ipc.send('close-main-window');
+});
 
-//Assign the event handler to an event:
-eventEmitter.on('scream', myEventHandler);
-
-eventEmitter.emit('scream');
+minimizeWindow.addEventListener('click', function()
+  {
+    ipc.send('minimize-main-window');
+  });

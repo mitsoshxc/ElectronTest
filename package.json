@@ -6,9 +6,6 @@
     "start": "electron ."
   },
   "devDependencies": {
-    "electron-prebuilt": "^0.35.2"
-  },
-  "dependencies": {
-    "nodemailer": "^4.0.1"
+    "electron-prebuilt": "^0.37.8"
   }
 }
