@@ -8,7 +8,7 @@ body
   background-color: #00FFFF;
 }
 
-#close, #minimize
+#close, #minimize, #maximize
 {
   -webkit-app-region: no-drag;
 }

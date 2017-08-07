@@ -25,10 +25,15 @@ ipc.on('minimize-main-window', function () {
     mainWindow.minimize();
 });
 
-mainWindow.on('unmaximize', function() {
-    console.log('unmaximized!');
+ipc.on('unmaximize-main-winodw', function() {
+    mainWindow.unmaximize();
 });
 
-mainWindow.on('enter-full-screen', function() {
-    console.log('entered full screen');
+ipc.on('maximize-main-window', function()
+{
+  mainWindow.maximize();
 });
+
+// mainWindow.on('enter-full-screen', function() {
+//     console.log('entered full screen');
+// });
