@@ -1,9 +1,11 @@
+var electron = require('electron');
 var ipc = require('electron').ipcRenderer;
+
+var currentWindow = electron.remote.getCurrentWindow();
 var closeEl = document.getElementById("close");
 var minimizeWindow = document.getElementById("minimize");
 var maximizeWindow = document.getElementById("maximize");
-var electron = require('electron');
-var currentWindow = electron.remote.getCurrentWindow();
+
 
 closeEl.addEventListener('click', function () {
     ipc.send('close-main-window');
