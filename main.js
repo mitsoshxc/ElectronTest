@@ -24,3 +24,11 @@ ipc.on('close-main-window', function () {
 ipc.on('minimize-main-window', function () {
     mainWindow.minimize();
 });
+
+mainWindow.on('unmaximize', function() {
+    console.log('unmaximized!');
+});
+
+mainWindow.on('enter-full-screen', function() {
+    console.log('entered full screen');
+});
